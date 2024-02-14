@@ -1,0 +1,83 @@
+section#service {
+  
+  display: flex;
+  align-items: center;
+}
+section#service .wrap {
+  display: grid;
+  grid-template-rows: auto auto auto;
+  grid-template-columns: auto auto;
+  position: relative;
+  align-items: center;
+}
+section#service .wrap h2 {
+  
+}
+section#service .wrap p {
+  
+}
+section#service .wrap >ul { 
+  display: flex;
+  grid-column: 2;
+  grid-row: 1 / span 2;
+  align-items: center;
+  justify-self: end;
+  gap: 15px;
+}
+section#service .wrap ul li {
+  
+}
+section#service .wrap ul li h3 {
+  
+}
+section#service .wrap ul li h3 a {  
+  border-radius: 50%;
+  border: 1px solid #283C75;
+  display: block;
+  font-size: 1.25rem;
+  height: 130px;
+  width: 130px;
+  text-align: center;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+section#service .wrap ul li:first-child h3 a{
+  background-color: #283C75;
+  color: white;
+}
+section#service .wrap ul li ul {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  grid-row: 3;
+  box-sizing: border-box;
+  left: 0;
+  top: 0;
+  grid-column: 1 / span 2;
+}
+section#service .wrap ul li ul li {
+  
+}
+section#service .wrap ul li ul li a {
+  display: block;
+  width: 360px;
+  height: 240px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 50px;
+}
+section#service .wrap ul li ul li a h4 {
+  
+  border-bottom: 2px solid black;
+  font-size: 1.78125rem;
+  line-height: 2;
+  font-weight: bold;
+}
+section#service .wrap ul li ul li a p {
+  
+}/*# sourceMappingURL=service.css.map */

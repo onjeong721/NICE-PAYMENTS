@@ -1,0 +1,43 @@
+section#notice {
+
+  display: flex;
+  align-items: center;
+}
+section#notice .wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 500px;
+  width: 100%;
+}
+section#notice .wrap h2 {
+
+}
+section#notice .wrap ul {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+section#notice .wrap ul li {
+
+  border-top: 1px solid #ccc;
+  width: calc(100% / 4 - 30px);
+}
+section#notice .wrap ul li a {
+  display: block;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+section#notice .wrap ul li a h4 {
+  font-size: 1.375rem;
+  height: 60px;
+  line-height: 1.5;
+  font-weight: bold;
+  padding-top: 15px;
+}
+section#notice .wrap ul li a date {
+  color: #999;
+}/*# sourceMappingURL=notice.css.map */
