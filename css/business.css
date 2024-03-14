@@ -5,47 +5,67 @@ section#business .wrap {
   display: grid;
   grid-template-columns: 1fr 2fr;
   grid-template-rows: auto auto auto;
-  align-items: center;
+  align-items: start;
+  width: initial;
+  padding-left: calc((100% - 1600px) / 2);
+  /*! box-sizing: border-box; */
+  justify-items: start;
 }
-section#business .wrap h2 {
+section#business .wrap span{
+  display: grid;
+  grid-template-rows: auto auto auto;
+  align-items: center; 
+  height: 100%;
+  grid-row: 1 / span 3;
+}
+section#business .wrap span h2 {
 
   align-self: end;
 }
-section#business .wra p.ph {
+section#business .wra span p.ph {
 
 }
-section#business .wrap p.p {
+section#business .wrap span p.p {
 
   align-self: start;
+  line-height: 1.8;
+  font-weight: 400;
+  letter-spacing: -2px;
+  font-size: 21px;
 }
 section#business .wrap ul {
   grid-column: 2;
   grid-row: 1 / span 3;
-  display: flex;
   width: 100%;
-  gap: 30px;
   height: 100%;
   overflow: hidden;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  column-gap: 20px;
+  justify-items: start;
 }
 section#business .wrap ul h3 {
 
 }
 section#business .wrap ul li {
+  width: 350px !important;
 }
 section#business .wrap ul li a {
   display: block;
   display: flex;
   flex-direction: column;
-  align-items: start;
-  justify-content: space-between;
   background-color: white;
-  gap: 30px;
   padding: 60px 30px;
   height: 100%;
   box-sizing: border-box;
   transition: all 0.5s;
   width: 350px;
+  display: grid;
+  grid-template-rows: auto auto auto;
+  row-gap: 20px;
+}
+section#business .wrap ul li:nth-of-type(3) a{
+  width: 400px !important;
 }
 section#business .wrap ul li a:hover{
   background-color: #283C75;
@@ -59,6 +79,7 @@ section#business .wrap ul li a::after{
   height: 100px;
   background-size: contain;
   align-self: end;
+  justify-self: end;
 }
 section#business .wrap ul li:nth-of-type(1) a:hover::after{
   background: url(../img/business11.png) no-repeat center /contain;
@@ -88,4 +109,7 @@ section#business .wrap ul li a h4 {
 section#business .wrap ul li a p {
 
   font-size: 1.75rem;
+  line-height: 1.5;
+  letter-spacing: -2px;
+  font-weight: 600;
 }/*# sourceMappingURL=business.css.map */

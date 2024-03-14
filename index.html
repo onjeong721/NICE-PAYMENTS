@@ -16,8 +16,6 @@
     <!-- https://ionic.io/ionicons/v1 -->
     <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/1.5.2/css/ionicons.min.css">
     <link rel="stylesheet" href="css/font.css">
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/title.css">
     <link rel="stylesheet" href="css/company.css">
@@ -25,6 +23,43 @@
     <link rel="stylesheet" href="css/service.css">
     <link rel="stylesheet" href="css/notice.css">
     <link rel="stylesheet" href="css/footer.css">
+    <!-- 자바스크립트 -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $(window).scroll(function(){
+                if($(window).scrollTop()){
+                    $("header").addClass("scroll");
+                }else{
+                    $("header").removeClass("scroll");
+                }
+            });
+            // 헤더
+            $("header .wrap > a").click(function(){
+                $("header").toggleClass("hamclick");
+                $(".menuslide").slideToggle();
+                return false;
+            });
+            // 푸터
+            $("footer .wrap .family h3 a").click(function(){
+                $("footer .wrap .family .familylist").slideToggle();
+                return false;
+            });
+        });
+    </script>
+    <!-- 슬릭 -->
+    <link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+    <script type="text/javascript" src="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script type="text/javascript">
+        // $(document).ready(function(){
+        //     $('.Bservice').slick({
+        //     infinite: false,
+        //     slidesToShow: 3,
+        //     slidesToScroll: 1
+        //     });
+        // });
+    </script>
 </head>
 <body>
    <!-- 헤더 -->
@@ -35,18 +70,81 @@
                 <li><a href="">KOR</a></li>
                 <li><a href="">ENG</a></li>
             </ul>
-            <a href="">
+            <a href="" class="menu">
                 <span></span>
                 <span></span>
                 <span></span>
             </a>
+            <div class="menuslide">
+                <div class="wrap menuC">
+                    <ul class="menuwrap">
+                        <li>
+                            <h3><a href="">회사소개</a></h3>
+                            <ul class="gnb">
+                                <li><a href="">대표이사 인사말</a></li>
+                                <li><a href="">회사개요</a></li>
+                                <li><a href="">NICE 가치체계</a></li>
+                                <li><a href="">연혁</a></li>
+                                <li><a href="">인재채용</a></li>
+                                <li><a href="">오시는 길</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <h3><a href="">사업영역</a></h3>
+                            <ul class="gnb">
+                                <li><a href="">전자결제 사업</a></li>
+                                <li><a href="">전자금융관련 사업</a></li>
+                                <li><a href="">VAN 사업</a></li>
+                                <li><a href="">Cross Border 결제사업</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <h3><a href="">서비스</a></h3>
+                            <ul class="gnb">
+                                <li><a href="">PG 서비스</a></li>
+                                <li><a href="">VAN 서비스</a></li>
+                                <li><a href="">For Startups</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <h3><a href="">제품</a></h3>
+                            <ul class="gnb">
+                                <li><a href="">유선단말기</a></li>
+                                <li><a href="">무선단말기</a></li>
+                                <li><a href="">POS</a></li>
+                                <li><a href="">Tablet Order</a></li>
+                                <li><a href="">KIOSK</a></li>
+                                <li><a href="">멀티패드</a></li>
+                                <li><a href="">서명패드</a></li>
+                                <li><a href="">IC리더기</a></li>
+                                <li><a href="">RF리더기</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <h3><a href="">고객지원</a></h3>
+                            <ul class="gnb">
+                                <li><a href="">공지사항</a></li>
+                                <li><a href="">사업제휴</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <h3><a href="">입찰정보</a></h3>
+                            <ul class="gnb">
+                                <li><a href="">입찰정보</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
         </div>
     </header>
     <!-- 타이틀 -->
     <div id="title">
+        <video src="img/titleV.mp4" muted="" loop="" playsinline="" class="video" id="video" autoplay="" allowfullscreen></video>
         <div class="wrap">
-            <H2>NICE PAYMENTS</H2>
-            <p>멈추지 않는 통합결제서비스</p>
+            <H2>NICE <span>PAYMENTS</span></H2>
+            <p>멈추지 않는 통합결제서비스 고객의 성공과 함께합니다.</p>
         </div>
     </div>
     <main>
@@ -58,7 +156,6 @@
                     종합 금융인프라 그룹으로 성장한 NICE GROUP의 계열사입니다. </p>
                 <p class="p">끊임없는 도전정신, 혁신정신, 고도의 전문성을 바탕으로 기술, 통신, 금융을<br>융합한 선도적인 지급 결제 서비스로 시장을 주도해 나갈 것입니다. </p>
                 <ul>
-                    <h3 class="hide">회사소개</h3>
                     <li><a href="">NICE가치체계</a></li>
                     <li><a href="">인재채용</a></li>
                     <li><a href="">VIEW MORE</a></li>
@@ -68,12 +165,14 @@
         <!-- 비지니스 -->
         <section id="business">
             <div class="wrap">
-                <h2 class="cat">BUSINESS</h2>
-                <p class="ph"> 다양하고 안전한<br>
+                <span>
+                    <h2 class="cat">BUSINESS</h2>
+                    <p class="ph"> 다양하고 안전한<br>
                     결제서비스를 제공합니다. </p>
-                <p class="p">국내 지급결제시장을 선도하는 기업<br>
+                    <p class="p">국내 지급결제시장을 선도하는 기업<br>
                     나이스페이먼츠(주) </p>
-                <ul>
+                </span>
+                <ul class="Bservice">
                     <h3 class="hide">사업분야</h3>
                     <li>
                         <a href="">
@@ -90,7 +189,7 @@
                     <li>
                         <a href="">
                             <h4>CP</h4>
-                            <p>국내 및 해외 간편결제 시스템<br>네트워크 제공으로<br>보다 편리하고 안전한<br>금융서비스 제공!</p>
+                            <p>국내 및 해외 간편결제<br>시스템네트워크 제공으로<br>보다 편리하고 안전한<br>금융서비스 제공!</p>
                         </a>
                     </li>
                     <li>
@@ -104,7 +203,7 @@
         <!-- 서비스 -->
         <section id="service">
             <div class="wrap">
-                <h2 class="cat">service</h2>
+                <h2 class="cat">SERVICE</h2>
                 <p class="ph"> 선도적인 지급 결제 서비스를 제공합니다.</p>
                 <ul>
                     <li>
@@ -218,8 +317,36 @@
                 <li><a href="">인스타그램</a></li>
                 <li><a href="">트위터</a></li>
             </ul>
-            <select name="Family Site" id="">
-                <opytion>Family Site</opytion>
-            </select>
+            <div class="family">
+                <h3><a href="" class="select">Family Site</a></h3>
+                <div class="familylist">
+                    <ul>
+                        <li><a class="link" href="http://www.niceinfo.co.kr/main.nice">NICE평가정보(주)</a></li>
+                        <li>
+                        </li>
+                        <li><a class="link" href="https://www.nicerating.com/main.do">NICE신용평가</a></li>
+                        <li><a class="link" href="https://www.nicednb.com/index_new.do">NICE D&amp;B</a></li>
+                        <li><a class="link" href="http://www.nicepni.co.kr/main">NICE피앤아이</a></li>
+                        <li><a class="link" href="http://www.nicevan.co.kr">NICE에프앤아이</a></li>
+                        <li><a class="link" href="http://www.nicezinidata.com">NICE지니데이타</a></li>
+                        <li><a class="link" href="https://www.nicetcm.co.kr">한국전자금융</a></li>
+                        <li><a class="link" href="http://www.nicevan.co.kr">NICE정보통신</a></li>
+                        <li><a class="link" href="https://www.kisvan.co.kr">KIS정보통신</a></li>
+                        <li><a class="link" href="https://www.nicednr.co.kr/ko/index.do">NICE디앤알</a></li>
+                        <li><a class="link" href="https://www.nicecms.co.kr/front/main.act">NICE씨엠에스</a></li>
+                        <li><a class="link" href="https://www.okpos.co.kr">오케이포스</a></li>
+                        <li><a class="link" href="http://www.seoulset.co.kr">서울전자통신</a></li>
+                        <li><a class="link" href="http://it-m.co.kr/home/main.php">아이티엠반도체</a></li>
+                        <li><a class="link" href="https://zinitix.com">지니틱스</a></li>
+                        <li><a class="link" href="http://www.nicelms.com">LMS</a></li>
+                        <li><a class="link" href="http://www.doctorstech.com">닥터스텍</a></li>
+                        <li><a class="link" href="https://www.birdview.kr">버드뷰</a></li>
+                        <li><a class="link" href="https://www.niceabc.co.kr">NICE비즈니스플랫폼</a></li>
+                        <li><a class="link" href="http://www.realhub.co.kr">리얼허브</a></li>
+                        <li><a class="link" href="https://www.posbanksolutions.co.kr">포스뱅크솔루션즈</a></li>
+                    </ul>
+                </div>
+                
+            </div>
         </div>
     </footer>

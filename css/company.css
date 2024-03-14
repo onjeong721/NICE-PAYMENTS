@@ -8,13 +8,19 @@ section#company .wrap {
 }
 section#company .wrap h2 {
  
+  margin-bottom: 0;
 }
 section#company .wrap p.ph{
   
   font-size: 2.6875rem;
+  font-weight: 600;
+  letter-spacing: -2px;
 }
 section#company .wrap p.p {
   margin-bottom: 50px;
+  line-height: 1.5;
+  font-weight: 500;
+  letter-spacing: -2px;
 }
 section#company ul { 
   display: grid;
@@ -27,27 +33,52 @@ section#company ul h3 {
 }
 section#company ul li {
 }
-section#company ul li:nth-child(2){
+section#company ul li:nth-child(1){
   grid-column: 2;
   grid-row: 1;
 }
-section#company ul li:nth-child(3){
+section#company ul li:nth-child(2){
   grid-column: 2;
   grid-row: 2;
 }
-section#company ul li:nth-child(4){
+section#company ul li:nth-child(3){
   grid-column: 1;
   grid-row: 2;
 }
 section#company ul li a {
- 
   line-height: 3;
+}
+section#company ul li:nth-child(-n+2) a{
+  font-size: 21px;
+  font-weight: 550;
+  width: 200px;
+  display: block;
+  position: relative;
+}
+section#company ul li:nth-child(3) a::before{
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background: url(../img/right.png) no-repeat center /contain;
+  vertical-align: -6px;
+  padding-right: 30px;
+}
+section#company ul li:nth-child(-n+2) a::after{
+    content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background: url(../img/zarrow.png) no-repeat center /contain;
+  vertical-align: -4px;
+  margin-left: 5px;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translate(-50%, 0);
 }
 section#company ul li:nth-child(1) a{
   
-}
-section#company ul li a{
-  font-size: 1.375rem;
 }
 section#company ul li:nth-child(2) a{
   

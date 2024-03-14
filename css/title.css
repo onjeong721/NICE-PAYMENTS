@@ -1,12 +1,40 @@
 #title {
  
+  position: relative;
+}
+#title video{
+  height: 100%;
+  width: 100%;
 }
 #title .wrap {
- 
+  position: absolute;
+  top: 70%;
+  width: 100%;
+  padding: 0 200px;
 }
+#title .wrap video{
+  
+  height: 100%;
+  width: 100%;
+  display: none;
+}
+
 #title .wrap h2 {
  
+  font-size: 80px;
+  color: white;
+  font-weight: 700;
+  margin-bottom: 20px;
+  letter-spacing: 2px;
+}
+#title .wrap h2 span{
+  
+  color: transparent;
+  -webkit-text-stroke: 0.5px white;
 }
 #title .wrap p {
  
+  font-size: 30px;
+  color: white;
+  font-weight: 520;
 }/*# sourceMappingURL=title.css.map */
