@@ -62,7 +62,7 @@ section#company ul li:nth-child(3) a::before{
   height: 20px;
   background: url(../img/right.png) no-repeat center /contain;
   vertical-align: -6px;
-  padding-right: 30px;
+  margin-right: 13px;
 }
 section#company ul li:nth-child(-n+2) a::after{
     content: "";
@@ -70,7 +70,6 @@ section#company ul li:nth-child(-n+2) a::after{
   width: 20px;
   height: 20px;
   background: url(../img/zarrow.png) no-repeat center /contain;
-  vertical-align: -4px;
   margin-left: 5px;
     position: absolute;
     top: 50%;

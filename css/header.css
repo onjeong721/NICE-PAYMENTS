@@ -20,6 +20,7 @@ header >.wrap {
   padding-left: calc((100% - 1600px) / 2);
   color: white;
   column-gap: 10px;
+  justify-items: center;
 }
 header .wrap video{
   width: 100%;

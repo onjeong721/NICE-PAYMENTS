@@ -1,0 +1,221 @@
+@media screen and (max-width:768px){
+  .wrap{
+    padding: 0 15px !important;
+  }
+  section{
+    padding: 80px 0;
+  }
+  .cat{
+    font-size: 20px;
+  }
+  .ph{
+    font-size: 21px !important;
+  }
+  .p{
+    font-size: 14px !important;
+  }
+  .p br{
+    display: none;
+  }
+  header{
+    height: 50px;
+  }
+  header > .wrap{
+    padding-right: 0px !important;;
+  }
+  header .wrap h1{
+    width: 100px;
+    height: 100%;
+  }
+    header .wrap > ul.lang{
+    margin-right: 0;
+  }
+  header .wrap ul.lang li a{
+    font-size: 10px;
+  }
+  header .wrap ul.lang li:first-child a::after{
+    width: 10px;
+    height: 10px;
+  }
+  header .wrap > a{
+    width: 20px;
+    padding: 0 5px;
+  }
+  #title .wrap{
+    top: 50%;
+  }
+  #title .wrap h2{
+    font-size: 23px;
+  }
+  #title .wrap p{
+    font-size: 12px;
+  }
+  section#company .wrap{
+    gap: 10px;
+  }
+  section#company ul li:nth-child(-n+2) a{
+    font-size: 14px;
+    width: 100%;
+    margin-right: 29px;
+  }
+  section#company ul li:nth-child(-n+2) a::after{   
+  width: 15px;
+  height: 15px;
+  transform: translate(-50%, -50%);
+  }
+  section#company ul li:nth-child(3){
+    font-size: 12px;
+  }
+  section#company ul li a{
+    line-height: 2;
+  }
+  section#company ul li:nth-child(3) a::before{
+   
+  margin-right: 10px;
+  }
+/*  비즈니스  */
+  section#business .ph{
+    margin-bottom: 10px;
+  }
+  section#business .cat{
+    margin-bottom: 10px;
+  }
+  section#business .wrap{
+    grid-template-rows: auto auto;
+    row-gap: 30px;
+  }
+  section#business .wrap span{
+    grid-row: 1;  
+    grid-column: 1 / span 3;
+  }
+  section#business .wrap ul{
+    grid-column: 1 / span 3;
+    grid-row: 2;
+  }
+  section#business .wrap ul li a{
+    width: 150px;
+    padding: 30px 15px;
+    row-gap: 5px;
+  }
+  section#business .wrap ul li a::after{
+   width: 50px;
+    height: 50px;
+  }
+  section#business .wrap ul li a h4{
+    font-size: 13px;
+  }
+  section#business .wrap ul li a p{
+    font-size: 15px;
+    white-space: pre;
+  }
+/*  서비스  */
+  section#service .wrap{
+    row-gap: 5px;
+    margin-bottom: 170px;
+  }
+  section#service .wrap h2{
+    grid-column: 1 / span 3;
+    margin-bottom: 0;
+  }
+  section#service .wrap p{
+    grid-column: 1 / span 3;
+  }
+  section#service .wrap > ul{
+    grid-column: 1 / span 3;
+    grid-row: 3;
+  }
+  section#service .wrap ul li h3 a{
+    width: 60px;
+    height: 60px;
+    font-size: 12px;
+  }
+  section#service .wrap ul li ul{
+    font-size: 23px;
+    top: initial;
+    flex-direction: column;
+    width: 150%;
+  }
+  section#service .wrap ul li ul li{
+    width: 100%;
+  }
+  section#service .wrap ul li ul li a{
+    flex-direction: initial;
+    height: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+  }
+  section#service .wrap ul li ul li a h4{
+    font-size: 18px;
+  }
+  section#service .wrap ul li ul li a p{
+  font-size: 13px;
+  }
+/*  공지사항  */
+  section#notice{
+    border-top: 1px solid #ccc;
+  }
+  section#notice .wrap{
+    justify-content: center;
+    height: fit-content;
+  }
+  section#notice .wrap h2{
+    margin-bottom: 30px;
+  }
+  section#notice .wrap ul{
+    flex-direction: column;
+  }
+  section#notice .wrap ul li{
+    width: 100%;
+  }
+  section#notice .wrap ul li a{
+    gap: 10px;
+    padding: 10px 0 20px 0;
+  }
+  section#notice .wrap ul li a h4{
+   font-size: 15px;
+   height: fit-content;
+   line-height: 1;
+   padding: 0;
+  }
+  section#notice .wrap ul li a date{
+    font-size: 13px;
+  }
+/*  푸터  */
+  footer .wrap{
+    width: initial;
+    display: flex !important;
+    flex-direction: column;
+    padding: 20px 15px 20px 15px !important;
+    gap: 15px !important;
+  }
+  footer .wrap p{
+    font-size: 12px;
+    order: 6;
+  }
+  footer .wrap h2{
+    height: 50px !important;
+  }
+  footer .wrap ul.peasonal li a{
+    font-size: 12px;
+  }
+  footer .wrap ul.sns li a{
+    width: 35px !important;
+    height: 35px !important;
+    padding: 0 5px !important;
+  }
+  footer .wrap address{
+    font-size: 12px;
+    text-align: center;
+    white-space: pre-wrap;
+    line-height: 1.4;
+    order: 5;
+    display: none;
+  }
+  footer .wrap .family h3 a{
+    font-size: 15px !important;
+  }
+  footer .wrap .family::after{
+    display: none !important;
+  }
+}
