@@ -49,15 +49,16 @@ section#service .wrap ul li h3 a {
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: 0.5s;
 }
 section#service .wrap ul li ul li a:hover{
   background-color: #283C75;
   color: white;
 }
-section#service .wrap ul li:first-child h3 a{
+/* section#service .wrap ul li:first-child h3 a{
   background-color: #283C75;
   color: white;
-}
+} */
 section#service .wrap ul li ul {
   position: absolute;
   width: 100%;
@@ -69,6 +70,11 @@ section#service .wrap ul li ul {
   left: 0;
   top: 0;
   grid-column: 1 / span 2;
+  padding: 50px 0;
+  transition: 0.5s;
+}
+section#service .wrap ul li:nth-child(2) ul{
+  display: none;
 }
 section#service .wrap ul li ul li {
   
@@ -123,4 +129,9 @@ section#service .wrap ul li ul li a:hover p::after{
   to{
     transform: translateX(0px);
   }
+}
+
+.navy{
+  background-color: #283C75;
+  color: white;
 }

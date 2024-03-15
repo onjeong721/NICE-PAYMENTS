@@ -15,6 +15,7 @@ section#company .wrap p.ph{
   font-size: 2.6875rem;
   font-weight: 600;
   letter-spacing: -2px;
+  word-break: keep-all;
 }
 section#company .wrap p.p {
   margin-bottom: 50px;
@@ -49,7 +50,7 @@ section#company ul li a {
   line-height: 3;
 }
 section#company ul li:nth-child(-n+2) a{
-  font-size: 21px;
+  font-size: 24px;
   font-weight: 550;
   width: 200px;
   display: block;

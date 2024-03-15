@@ -4,19 +4,18 @@ section#business {
 section#business .wrap {
   display: grid;
   grid-template-columns: 1fr 2fr;
-  grid-template-rows: auto auto auto;
   align-items: start;
   width: initial;
   padding-left: calc((100% - 1600px) / 2);
   /*! box-sizing: border-box; */
   justify-items: start;
+  margin: 0 !important;
 }
 section#business .wrap span{
   display: grid;
   grid-template-rows: auto auto auto;
   align-items: center; 
   height: 100%;
-  grid-row: 1 / span 3;
 }
 section#business .wrap span h2 {
 
@@ -35,7 +34,6 @@ section#business .wrap span p.p {
 }
 section#business .wrap ul {
   grid-column: 2;
-  grid-row: 1 / span 3;
   width: 100%;
   height: 100%;
   overflow: hidden;
@@ -48,6 +46,8 @@ section#business .wrap ul h3 {
 
 }
 section#business .wrap ul li {
+  height: 400px;
+  margin-right: 20px;
 }
 section#business .wrap ul li a {
   display: block;
@@ -64,7 +64,6 @@ section#business .wrap ul li a {
   row-gap: 20px;
 }
 section#business .wrap ul li:nth-of-type(3) a{
-  width: 380px !important;
 }
 section#business .wrap ul li a:hover{
   background-color: #283C75;
@@ -107,8 +106,16 @@ section#business .wrap ul li a h4 {
 }
 section#business .wrap ul li a p {
 
-  font-size: 1.75rem;
+  font-size: 24px;
   line-height: 1.5;
   letter-spacing: -2px;
   font-weight: 600;
+}
+
+section#business .slick-list{
+  width: 120% !important;
+}
+section#business .slick-track{
+  width: 100% !important;
+  display: flex;
 }/*# sourceMappingURL=business.css.map */

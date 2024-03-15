@@ -1,5 +1,4 @@
 footer {
-
   background-color: #283C75;
 }
 footer .wrap {
@@ -13,7 +12,6 @@ footer .wrap {
   row-gap: 20px;
 }
 footer .wrap h2 {
-
   font-size: 0;
   background: url(../img/logoW.svg) no-repeat center /contain;
   width: 160px;
@@ -47,12 +45,12 @@ footer .wrap ul.peasonal li:first-child a::after{
 footer .wrap address {
   grid-column: 2;
   grid-row: 3;
-
+  text-align: center;
+  white-space: nowrap;
 }
 footer .wrap p {
   grid-column: 2;
   grid-row: 4;
-
 }
 footer .wrap ul.sns {
   grid-column: 1;

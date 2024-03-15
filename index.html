@@ -28,6 +28,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script type="text/javascript">
         $(document).ready(function(){
+            //스크롤
             $(window).scroll(function(){
                 if($(window).scrollTop()){
                     $("header").addClass("scroll");
@@ -41,10 +42,48 @@
                 $(".menuslide").slideToggle();
                 return false;
             });
+            //서비스
+            $("section#service .wrap ul li:first-child h3 a").addClass("navy");
+            $("section#service .wrap ul li h3 a").click(function(){
+                $(this).parents("li").children().show().addClass("addflex");
+                $(this).parents("li").siblings().children("ul").hide().removeClass("addflex");
+                $(this).addClass("navy");
+                $(this).parents("li").siblings().children("h3").children("a").removeClass("navy");
+                return false;
+            });
             // 푸터
             $("footer .wrap .family h3 a").click(function(){
                 $("footer .wrap .family .familylist").slideToggle();
                 return false;
+            });
+        //반응형 768 오픈
+            // 타이틀이미지 변경
+            if($(window).width()<=768){
+                $("#title video").hide();
+                $(".titleimg").removeClass("hide");
+            }
+        //반응형 1200 오픈
+            if($(window).width()<=1200){
+                //메뉴
+                $(".gnb").wrap("<div class='gnbwrap'></div>");
+                $(".gnbwrap").hide();
+                $(".menuslide .menuC ul li h3 a").click(function(){
+                    $(this).parent().siblings(".gnbwrap").slideToggle();
+                    $(this).parent("li").siblings().children(".gnbwrap").hide();
+                    return false;
+                });
+            }
+        //리사이즈
+            //768기준
+            $(window).resize(function(){
+                if($(window).width()<=768){//768이하
+                    $("#title video").hide();
+                    $(".titleimg").removeClass("hide");
+                }
+                if($(window).width()>768){//768초과
+                    $("#title video").show();
+                    $(".titleimg").addClass("hide");
+                }
             });
         });
     </script>
@@ -53,13 +92,29 @@
     <link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
     <script type="text/javascript" src="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script type="text/javascript">
-        // $(document).ready(function(){
-        //     $('.Bservice').slick({
-        //     infinite: false,
-        //     slidesToShow: 3,
-        //     slidesToScroll: 1
-        //     });
-        // });
+        $(document).ready(function(){
+            $('.Bservice').slick({
+            infinite: false,
+            slidesToShow: 2.9,
+            slidesToScroll: 1,
+            autoplay: false,
+            responsive: [{
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
+                    infinite: false,
+                    dots: false
+                }
+            }]
+            });
+            $('.titleimg').slick({
+                infinite: true,
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                autoplay: true
+            });
+        });
     </script>
 </head>
 <body>
@@ -143,6 +198,10 @@
     <!-- 타이틀 -->
     <div id="title">
         <video src="img/titleV.mp4" muted="" loop="" playsinline="" class="video" id="video" autoplay="" allowfullscreen></video>
+        <div class="titleimg hide">
+            <img src="img/mtitle1.jpg" alt="타이틀이미지1">
+            <img src="img/mtitle2.jpg" alt="타이틀이미지2">
+        </div>
         <div class="wrap">
             <H2>NICE <span>PAYMENTS</span></H2>
             <p>멈추지 않는 통합결제서비스 고객의 성공과 함께합니다.</p>

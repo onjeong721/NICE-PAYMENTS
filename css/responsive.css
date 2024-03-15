@@ -1,3 +1,140 @@
+@media screen and (max-width:1200px){
+  .wrap{
+    padding: 0 30px !important;
+  }
+  .cat{
+    font-size: 28px; 
+  }
+  .ph{
+    font-size: 35px !important;
+  }
+  .p{
+    font-size: 20px !important;
+  }
+  .menuslide{
+    width: 30%;
+    right: 0;
+    left: initial;
+  }
+  .menuslide .menuC{
+    height: 100vh;
+    padding: 0 !important;
+  }
+  .menuslide .menuC ul.menuwrap{
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, auto);
+    justify-items: start;
+    height: 50%;
+    width: 100%;
+    padding: 100px 0;
+  }
+  .menuslide .menuC ul li{
+    width: 100%;
+  }
+  .menuslide .menuC ul li h3 a{
+    font-size: 21px;
+    line-height: 1;
+    height: fit-content;
+    position: relative;
+    padding: 20px 15px;
+    border-top: 1px solid #ccc;
+  }
+  .menuslide .menuC ul li:first-child h3 a{
+    border-top: none;
+  }
+  .menuslide .menuC ul li h3 a::after{
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: url(../img/downB.png) no-repeat center /contain;
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translate(0, -50%);
+  }
+   .menuslide .menuC ul li ul.gnb{
+    padding: 20px 15px;
+    background-color: #f4f4f4;
+  }
+  .menuslide .menuC ul li ul.gnb li a{
+    line-height: 2;
+    font-size: 17px;
+  }
+  header .wrap h1{
+    width: 150px !important;
+  }
+  header.hamclick .wrap h1 {
+    background: url(../img/logoW.svg) no-repeat center /contain;
+  }
+  header .wrap > a{
+    width: 30px;
+    padding-right: 0;
+  }
+  .menuslide .menuC ul li h3{
+  }
+  #title .wrap h2{
+    font-size: 70px;
+  }
+  #title .wrap p{
+    font-size: 28px;
+  }
+  section#company ul li:nth-child(-n+2) a{
+    font-size: 19px;
+  }
+  section#business .wrap{
+    column-gap: 50px;
+    row-gap: 30px;
+  }
+  section#business .slick-list{
+    width: 
+  }
+  section#business .ph{
+    margin-bottom: 20px;
+  }
+  section#business span p br{
+    display: none;
+  }
+  section#business .wrap span{
+    grid-row: 1;
+    grid-column: 1 / span 3;
+    width: 100%;
+  }
+  section#business .wrap ul{
+    grid-column: 1 / span 3;
+  }
+  section#service .wrap ul li h3 a{
+    width: 100px;
+    height: 100px;
+  }
+  section#service .wrap ul li ul li a h4{
+    font-size: 24px;
+  }
+  section#service .wrap ul li ul li a p{
+    font-size: 15px;
+  }
+  section#service .wrap ul li ul li a p::after{
+    width: 18px;
+    height: 18px;
+  }
+  section#notice .wrap ul li a h4{
+    font-size: 19px;
+  }
+  section#notice .wrap ul li a date{
+    font-size: 15px;
+  }
+  footer .wrap{
+    padding: 20px 15px 20px 15px !important;
+    width: inherit;
+  }
+  footer .wrap .family::after{
+    display: none !important;;
+  }
+  footer .wrap address{
+    grid-column: 1 / span 4 !important;
+  }
+}
+
 @media screen and (max-width:768px){
   .wrap{
     padding: 0 15px !important;
@@ -9,13 +146,26 @@
     font-size: 20px;
   }
   .ph{
-    font-size: 21px !important;
+    font-size: 19px !important;
   }
   .p{
     font-size: 14px !important;
   }
   .p br{
     display: none;
+  }
+  .menuslide{
+    width: 100%;
+  }
+  .menuslide .menuC ul li h3 a{
+    font-size: 18px;
+  }
+  .menuslide .menuC ul li h3 a::after{  
+    width: 17px;
+    height: 17px;
+  }
+  .menuslide .menuC ul li ul.gnb li a{
+    font-size: 16px;
   }
   header{
     height: 50px;
@@ -24,10 +174,14 @@
     padding-right: 0px !important;;
   }
   header .wrap h1{
-    width: 100px;
+    width: 101px !important;
     height: 100%;
   }
-    header .wrap > ul.lang{
+  header.hamclick .wrap h1{
+    
+  background: url(../img/logo.svg) no-repeat center /contain;
+  }
+  header .wrap > ul.lang{
     margin-right: 0;
   }
   header .wrap ul.lang li a{
@@ -39,16 +193,16 @@
   }
   header .wrap > a{
     width: 20px;
-    padding: 0 5px;
-  }
-  #title .wrap{
-    top: 50%;
+    padding: 0 15px;
   }
   #title .wrap h2{
     font-size: 23px;
   }
   #title .wrap p{
     font-size: 12px;
+  }
+  #title img{
+    width: 100%;
   }
   section#company .wrap{
     gap: 10px;
@@ -91,10 +245,15 @@
   section#business .wrap ul{
     grid-column: 1 / span 3;
     grid-row: 2;
+    display: initial;
+  }
+  section#business .wrap ul li{
+    height: 200px;
+    width: 150px !important;
   }
   section#business .wrap ul li a{
-    width: 150px;
-    padding: 30px 15px;
+    width: 140px;
+    padding: 30px 5px;
     row-gap: 5px;
   }
   section#business .wrap ul li a::after{
@@ -102,10 +261,10 @@
     height: 50px;
   }
   section#business .wrap ul li a h4{
-    font-size: 13px;
+    font-size: 11px;
   }
   section#business .wrap ul li a p{
-    font-size: 15px;
+    font-size: 13px;
     white-space: pre;
   }
 /*  서비스  */
@@ -119,6 +278,7 @@
   }
   section#service .wrap p{
     grid-column: 1 / span 3;
+    margin-bottom: 20px;
   }
   section#service .wrap > ul{
     grid-column: 1 / span 3;
@@ -146,7 +306,7 @@
     padding: 0;
   }
   section#service .wrap ul li ul li a h4{
-    font-size: 18px;
+    font-size: 17px;
   }
   section#service .wrap ul li ul li a p{
   font-size: 13px;
@@ -186,8 +346,7 @@
     width: initial;
     display: flex !important;
     flex-direction: column;
-    padding: 20px 15px 20px 15px !important;
-    gap: 15px !important;
+    gap: 18px !important;
   }
   footer .wrap p{
     font-size: 12px;
@@ -205,12 +364,7 @@
     padding: 0 5px !important;
   }
   footer .wrap address{
-    font-size: 12px;
-    text-align: center;
-    white-space: pre-wrap;
-    line-height: 1.4;
-    order: 5;
-    display: none;
+   display: none;
   }
   footer .wrap .family h3 a{
     font-size: 15px !important;

@@ -42,6 +42,9 @@ header.hamclick .wrap h1{
 header.scroll .wrap h1{
   background: url(../img/logo.svg) no-repeat center /contain;
 }
+header.scroll.hamclick .wrap h1{
+  background: url(../img/logo.svg) no-repeat center /contain;
+}
 header .wrap >ul.lang {
   grid-column: 3;
   display: flex;
